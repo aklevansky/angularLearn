@@ -76,3 +76,10 @@ input[type="text"] {
 li {
   list-style: none;
 }
+
+.nothingFound {
+  clear: left;
+  color: red;
+  font-weight: bold;
+  color: red;
+}
