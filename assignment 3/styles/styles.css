@@ -50,3 +50,29 @@ input[type="text"] {
     transform: rotate(360deg);
   }
 }
+
+.results {
+  clear: left;
+  margin: 0 auto;
+}
+
+.itemName {
+  margin: 0.5em 0;
+  font-weight: bold;
+}
+
+.itemDescription {
+  border-bottom: 1px solid black;
+}
+
+.itemRemove {
+  float: right;
+}
+
+.itemShort {
+  font-style: italic;
+}
+
+li {
+  list-style: none;
+}
