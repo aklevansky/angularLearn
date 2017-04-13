@@ -15,6 +15,12 @@
 		narrow.searchTerm;
 
 		narrow.narrowSearch = function() {
+			// if user input empty
+			if ( !narrow.searchTerm ) {
+				narrow.found = [];
+				return;
+			}
+
 			let promise = MenuSearchService.getMatchedMenuItems(narrow.searchTerm)
 			promise.then((response) => {
 					narrow.found = response;
