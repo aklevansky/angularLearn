@@ -17,7 +17,7 @@
       <div class="form-group narrow-button">
         <button class="btn btn-primary" ng-click="narrow.narrowSearch(narrow.searchTerm)">Narrow It Down For Me!</button>
       </div>
-      <div class="nothingFound" ng-show="narrow.displayNothingFound">Nothing found!</div>
+      <div class="nothingFound" ng-show="narrow.found !== undefined && narrow.found.length === 0">Nothing found!</div>
       <!-- found-items should be implemented as a component -->
       <found-items found-items="narrow.found" on-remove="narrow.removeItem(index)"></found-items>
     </div>

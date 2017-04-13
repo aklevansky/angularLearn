@@ -13,32 +13,21 @@
 		let narrow = this;
 
 		narrow.searchTerm;
-		narrow.displayNothingFound = false;
 
 		narrow.narrowSearch = function() {
 			// if user input empty
 			if ( !narrow.searchTerm ) {
-				narrow.displayNothingFound = true;
 				narrow.found = [];
 				return;
 			}
 
 			let promise = MenuSearchService.getMatchedMenuItems(narrow.searchTerm)
 			promise.then((response) => {
-
-					// if response is not empty
-					if ( response.length ) {
-						narrow.displayNothingFound = false;
-					} else {
-						narrow.displayNothingFound = true;
-					}
-
 					narrow.found = response;
 				})
 				// no special error handling
 				.catch((error) => {
-					narrow.found = '';
-					narrow.displayNothingFound = true;
+					narrow.found = [];
 				});
 		}
 
