@@ -1,0 +1,61 @@
+body {
+	width: 80%;
+	margin: 0 auto;
+	font-size: 1.5em;
+
+}
+
+#home {
+	background: url(/img/yaakov_fed.png) no-repeat;
+	background-position: center right;
+	height: 80vh;
+}
+
+header {
+	border-bottom: 2px solid black;
+}
+
+#categoriesList li {
+	list-style: none;
+}
+
+#categoriesList ul {
+	padding: 0;
+	margin: 0;
+}
+
+#categoriesList a {
+	color: blue;
+	text-decoration: none;
+
+}
+
+#categoriesList a:hover {
+	font-weight: bold
+}
+
+#itemDescription li {
+	list-style: none;
+	border: 1px solid blue;
+	border-radius: 10px;
+	padding: 1em;
+	margin-top: 0.5em;
+}
+
+#itemDescription ul {
+	padding: 0;
+}
+
+.dishPrice {
+	font-weight: bold;
+	margin-top: 0.3em;
+	display: inline-block;
+	margin-right: 2em;
+}
+
+
+#itemDescription .dishName {
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	color: blue;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Libraries -->
+		<script src="lib/angular.min.js"></script>
+		<script src="lib/angular-ui-router.min.js"></script>
+		<!-- Modules -->
+		<script src="src/menuApp/menuApp.module.js"></script>
+		<script src="src/menuApp/data.module.js"></script>
+		<!-- Routes -->
+		<script src="src/routes.js"></script>
+		<!-- Controllers -->
+		<script src="src/menuApp/categoriesList.controller.js"></script>
+		<script src="src/menuApp/itemDetails.controller.js"></script>
+		<!-- Services -->
+		<script src="src/menuApp/menudata.service.js"></script>
+		<!-- Components -->
+		<script src="src/menuApp/categories.component.js"></script>
+		<script src="src/menuApp/items.component.js"></script>
+		<link rel="stylesheet" type="text/css" href="/css/styles.css">
+		<meta charset="UTF-8">
+		<title>Yaakov's No-Cookie Restaurant</title>
+	</head>
+	<body ng-app="menuApp" controller="CategoriesListController as categories">
+	<header><h1>Welcome to Yaakov's No-Cookie All-Veggie Restaurant</h1></header>
+	<ui-view></ui-view>
+</body>
+</html>

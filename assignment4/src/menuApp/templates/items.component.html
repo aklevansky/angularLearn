@@ -1,0 +1,9 @@
+<h2>Please see below the detailed information for our {{$ctrl.name}} dishes</h2>
+<ul id="itemDescription">
+	<li ng-repeat="dish in $ctrl.details">
+		<h3 class="dishName">{{dish.name}}</h3>
+		<div class="dishDescription">{{dish.description}}</div>
+		<div class="dishPrice" ng-if="dish.price_large">Price for a large portion: {{dish.price_large}}</div>
+		<div class="dishPrice" ng-if="dish.price_small">Price for a small portion: {{dish.price_small}}</div>
+	</li>
+</ul>
