@@ -1,0 +1,14 @@
+<div class="container" ng-if="CurrentUserInfoCtrl.noData">
+	<p>Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now!</a></p>
+</div>
+
+<div class="container" ng-if="!CurrentUserInfoCtrl.noData">
+
+	Name: {{CurrentUserInfoCtrl.user.name}} <br>
+	Email: {{CurrentUserInfoCtrl.user.email}} <br>
+	Phone: {{CurrentUserInfoCtrl.user.phone}} <br>
+	Favourite Dish: {{CurrentUserInfoCtrl.user.favDishDetails.name}} <br>
+	<br>
+	<img ng-src="{{CurrentUserInfoCtrl.basePath}}/images/{{CurrentUserInfoCtrl.user.favDish}}.jpg"><br>
+	{{CurrentUserInfoCtrl.user.favDishDetails.description}}
+</div>

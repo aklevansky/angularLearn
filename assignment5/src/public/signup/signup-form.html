@@ -1,0 +1,38 @@
+<div class="container"><h2>Sign up for our regular newsletter:</h2>
+	<fieldset>
+		<legend>Input your data</legend>
+		<form name="signupForm" novalidate>
+			<label>Name:</label><br>
+			<input 	type="text"
+			name="username"
+			ng-model="SignUpCtrl.user.name"
+			minlength="4"
+			required>
+			<span ng-if="(signupForm.username.$error.minlength || signupForm.username.$error.required) && signupForm.username.$touched">
+				User name must be at least 4 characters long
+			</span>
+			<br>
+			<label>Email:</label><br>
+			<input 	type="email"
+			name="email"
+			ng-model="SignUpCtrl.user.email"
+			required>
+			<span ng-if="signupForm.email.$touched && signupForm.email.$invalid">
+				Please enter a valid email address
+			</span>
+			<br>
+			
+			<label>Phone (XXXX-XX-XX-XX):</label><br>
+			<input 	type="text"
+			name="phone"
+			ng-model="SignUpCtrl.user.phone"
+			pattern="(\d{4})-(\d{2})-(\d{2})-(\d{2})">
+			<br>
+			<label>Please indicate a reference of your favourite dish (menu number)</label>
+			<input type="text" ng-model="SignUpCtrl.user.favDish" ng-blur="SignUpCtrl.checkDish()">
+			<span class="error" ng-show="SignUpCtrl.noMenuItem">No such menu item exists</span><br>
+			<button ng-disabled="signupForm.$invalid" ng-click="SignUpCtrl.submit()">Submit</button>
+			<div ng-show="SignUpCtrl.success">Your information has been saved!</div>
+		</form>
+	</fieldset>
+</div>
